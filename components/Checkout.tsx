@@ -40,7 +40,7 @@ const Checkout = () => {
                             {
                                 cart.map((product: any) => {
                                     return (
-                                        <div className='py-3 border-b border-gray-300'>
+                                        <div key={product.id}  className='py-3 border-b border-gray-300'>
                                             <div className='flex gap-2'>
                                                 <Image src={product.image} alt={product.title} width={100} height={100} />
                                                 <div className='flex flex-col gap-2 ml-4'>
