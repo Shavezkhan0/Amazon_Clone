@@ -4,12 +4,12 @@ import { useSuperbase } from '@/lib/superbase/Hooks/useSuperbase'
 import { useParams } from 'next/navigation';
 import React, { useEffect } from 'react'
 
-const page = () => {
+const ProductPage = () => {
     const { id } = useParams();
     const { singleProduct, getSingleProduct, } = useSuperbase()
     useEffect(() => {
         getSingleProduct(Number(id));
-    }, [])
+    }, [id,getSingleProduct])
     return (
         <div >
             <SingleProducts singleProduct={singleProduct} />
@@ -18,4 +18,4 @@ const page = () => {
     )
 }
 
-export default page
+export default ProductPage
