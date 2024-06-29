@@ -14,7 +14,7 @@ const Homepage = () => {
   useEffect(() => {
     getmensProducts()
     getwomensProducts()
-  }, [])
+  },[mensProduct,womensProduct])
 
 
   return (
