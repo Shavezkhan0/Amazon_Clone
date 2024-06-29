@@ -14,7 +14,7 @@ const SingleProducts = ({ singleProduct }: { singleProduct: any }) => {
                 {
                     singleProduct.map((product: any) => {
                         return (
-                            <div className='flex'>
+                            <div key={product.id} className='flex'>
                                 <div className='flex justify-between'>
                                     <div className='bg-gray-100 flex justify-center items-center'>
 
@@ -27,8 +27,8 @@ const SingleProducts = ({ singleProduct }: { singleProduct: any }) => {
                                         <h1 className='font-bold'>{`$${product.price}`}</h1>
                                         <div>
                                             <h1 className='font-bold text-base'>About this item...</h1>
-                                            <li>Display: 6.67" FHD+ pOLED (1080x2400) Ultra-narrow bezels Display with 120Hz Refresh rate; 1000nits peak brightness; Corning Gorilla Glass 5 Display Protection</li>
-                                            <li>Processor:Mediatek Dimensity 6080 6nm Octa-core 5G processor for high performance ; Up to 2.4GHz; Upto 12GB RAM including 6GB Virtual RAM</li>
+                                            <li>Display: 6.67 FHD+ pOLED (1080x2400) Ultra-narrow bezels Display with 120Hz Refresh rate 1000nits peak brightness; Corning Gorilla Glass 5 Display Protection</li>
+                                            <li>Processor:Mediatek Dimensity 6080 6nm Octa-core 5G processor for high performance  Up to 2.4GHz Upto 12GB RAM including 6GB Virtual RAM</li>
                                             <li>Camera: 108MP 3X in-sensor zoom AI Triple Camera with 8MP Ultra Wide sensor and 2MP Macro camera| 16MP Front camera</li>
                                         </div>
                                     </div>
